@@ -1,18 +1,29 @@
-const buttons = document.querySelectorAll("[data-carousel-button]");
+let slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+let slideInterval = setInterval(nextSlide, 5000);
 
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const offset = button.dataset.carouselButton === "next" ? 1 : -1;
-    const slides = button
-      .closest("[data-carousel]")
-      .querySelector("[data-slides]");
+function nextSlide() {
+  slides[currentSlide].className = "slide";
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].className = "slide active";
+}
 
-    const activeSlide = slides.querySelector("[data-active]");
-    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-    if (newIndex < 0) newIndex = slides.children.length - 1;
-    if (newIndex >= slides.children.length) newIndex = 0;
+let next = document.getElementsByClassName("next")[0];
+let prev = document.getElementsByClassName("prev")[0];
 
-    slides.children[newIndex].dataset.active = true;
-    delete activeSlide.dataset.active;
-  });
-});
+next.onclick = function () {
+  nextSlide();
+  clearInterval(slideInterval);
+  slideInterval = setInterval(nextSlide, 5000);
+};
+prev.onclick = function () {
+  prevSlide();
+  clearInterval(slideInterval);
+  slideInterval = setInterval(nextSlide, 5000);
+};
+
+function prevSlide() {
+  slides[currentSlide].className = "slide";
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  slides[currentSlide].className = "slide active";
+}

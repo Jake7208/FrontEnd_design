@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+/* *------------------ header ------------------- */
+header {
+  float: left;
+  z-index: 2;
+  position: relative;
+  padding-left: 10vw;
+  padding-top: 20px;
+}
+
+header img {
+  height: 80px;
+  width: 80px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #3b4314;
+}
+/* *------------------ header end  ------------------- */
+
+/* !----------------------- new Section ---------------------------*/
+
+/* *------------------ nav ------------------- */
+nav {
+  background-color: #212622;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  width: 10vw;
+  color: #fff;
+  padding: 20px 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* ?button styles  */
+
+/* TODO add modal for login form */
+
+.button {
+  float: right;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 25px 10px 25px;
+  font-size: 18px;
+  color: white;
+  background-color: #3b4314;
+  margin: 10px 10vw 10px 0px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* ?Change layout on screen sizes smaller than 600px */
+@media (max-width: 600px) {
+  nav li {
+    border: none;
+  }
+  nav li {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  nav li {
+    width: 80%;
+    border-top: white solid 1px;
+  }
+  nav ul {
+    padding-left: 10px;
+  }
+
+  nav li:first-child {
+    border-top: none;
+  }
+}
+
+/* *-------------------- Nav Section End  ---------------------- */
+
+/* !----------------------- new Section ---------------------------*/
+
+/* *--------------------------- ImgSlider ------------------------ */
+
+section .img-slider {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  inset: 0;
+  opacity: 0;
+  transition: 1s opacity ease-in-out;
+  transition-delay: 0ms;
+}
+
+.slide > img {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 50vh;
+  object-fit: none;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0;
+}
+
+.carousel-button {
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  top: 30%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  user-select: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.233);
+}
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.817);
+  transition: 0.6s ease;
+}
+
+.carousel-button:focus {
+  outline: none;
+}
+
+.carousel-button.prev {
+  border-radius: 0 3px 3px 0;
+
+  left: 0rem;
+}
+.carousel-button.next {
+  border-radius: 3px 0 0 3px;
+
+  right: 0rem;
+}

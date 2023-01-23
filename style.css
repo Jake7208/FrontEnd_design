@@ -1,102 +1,169 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  background-color: #202528;
-  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0;
+  background-color: var(--gray-1);
+}
+nav h1 {
+  color: var(--blue-2);
+}
+/* global css */
+#kp-css {
+  position: relative;
+  color: var(--blue-1);
+  background-color: var(--gray-9);
+  border-radius: 15px 15px 0 0;
+  margin-top: -15px;
+}
+
+#kp-css h2 {
+  font-size: var(--font-size-fluid-2);
+  color: var(--green-3);
+  text-align: center;
+}
+/* 2nd section under slider */
+
+#jp-css {
+  font: var(--font-serif);
+  font-size: var(--font-size-fluid-0);
+  color: var(--gray-12);
+  background-color: var(--gray-1);
+}
+
+#jp-css h2 {
+  font-size: var(--font-size-fluid-3);
+  color: var(--gray-11);
 }
 
 /* *------------------ header ------------------- */
-header {
-  float: left;
-  z-index: 2;
-  position: absolute;
-  padding-left: 10vw;
-  padding-top: 20px;
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-header img {
-  height: 80px;
-  width: 80px;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: #3b4314;
-}
-/* *------------------ header end  ------------------- */
-
-/* !----------------------- new Section ---------------------------*/
-
-/* *------------------ nav ------------------- */
 nav {
-  background-color: #212622;
-  text-align: center;
-  color: var(--stone-0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: var(--gray-10);
+  padding: 16px 32px;
 }
 
-nav ul {
-  list-style-type: none;
-  overflow: hidden;
+h1 {
+  color: var(--blue-1);
+  text-decoration: underline var(--green-3);
+}
+.logo {
+  float: left;
+  display: flex;
+  position: relative;
+
+  user-select: none;
+
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
 }
 
-nav li {
-  display: inline-block;
-}
-
-nav a {
-  color: var(--stone-0);
+.hamburger {
   display: block;
-  width: 10vw;
-  padding: 20px 18px;
-  text-decoration: none;
-  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+
+  user-select: none;
+
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
 }
-/* ?button styles  */
+
+.hamburger span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background-color: var(--gray-1);
+  border-radius: 6px;
+  z-index: 1;
+
+  transform-origin: 0 0;
+  transition: 0.4s;
+}
+
+.hamburger:hover span:nth-child(2) {
+  transform: translateX(10px);
+  background-color: var(--orange-2);
+}
+
+.hamburger.is-active span:nth-child(1) {
+  transform: translate(0px, -2px) rotate(45deg);
+}
+.hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(15px);
+}
+
+.hamburger.is-active span:nth-child(3) {
+  transform: translate(-3px, 3px) rotate(-45deg);
+}
+.hamburger.is-active:hover span {
+  background-color: var(--orange-2);
+}
+.menu {
+  display: none;
+  flex: 1 1 0%;
+  justify-content: flex-end;
+}
+.menu a {
+  margin: 0 16px;
+  padding: 13px 25px 13px 25px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.6 s;
+  border-radius: 99px;
+}
+.menu a.is-active,
+.menu a:hover {
+  color: var(--green-5);
+  background-color: var(--blue-1);
+}
+
+/* *------------------ header end ------------------- */ /* !----------------------- new Section ---------------------------*/ /* *------------------ nav ------------------- */
+/* ?button styles */
 
 /* TODO add modal for login form */
 
-.button {
-  float: right;
-  border: none;
-  border-radius: 15px;
-  padding: 10px 25px 10px 25px;
-  font-size: 18px;
-  color: var(--purple-0);
-  background-color: #3b4314;
-  margin: 10px 10vw 10px 0px;
+.btn-log {
+  border-radius: 20px;
+  padding: 13px 25px 13px 25px;
+  font-size: 20px;
+  color: var(--gray-12);
+  background-color: var(--orange-3);
+  margin: 0 16px;
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+.btn-log:hover {
+  background-color: var(--green-3);
+  transition: 0.7s;
+  color: var(--gray-12);
 }
 
 /* ?Change layout on screen sizes smaller than 600px */
-@media (max-width: 700px) {
-  header {
-    position: relative;
-    float: left;
-    padding-left: 10vw;
-    padding-top: 20px;
-  }
-  nav li {
-    border: none;
-  }
-  nav li {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  nav li {
-    width: 80%;
-    border-top: white solid 1px;
-  }
-  nav ul {
-    padding-left: 10px;
-  }
-
-  nav li:first-child {
-    border-top: none;
-  }
-}
 
 /* *-------------------- Nav Section End  ---------------------- */
 
@@ -105,9 +172,10 @@ nav a {
 /* *--------------------------- ImgSlider ------------------------ */
 
 .carousel {
+  background-color: rgba(0, 0, 0, 0.858);
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   overflow: hidden;
 }
 
@@ -126,10 +194,11 @@ nav a {
   top: 0;
   left: 0;
   opacity: 0;
-  transition: 0.5s opacity ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .slide img {
+  opacity: 0.3;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -142,7 +211,7 @@ nav a {
 .prev,
 .next {
   position: absolute;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
   font-size: 1.5em;
   padding: 0.5em;
@@ -167,12 +236,68 @@ nav a {
   right: 0;
 }
 
-@media (max-width: 700px) {
-  .carousel {
+/* *--------------------------- ImgSlider end ------------------------ */
+
+/* !----------------------- new Section ---------------------------*/
+
+/* *key frames */
+
+@media (min-width: 788px) {
+  .hamburger {
+    display: none;
+    opacity: 0;
+  }
+  .logo {
+    display: none;
+    opacity: 0;
+  }
+  .menu {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 860px) {
+  .logo {
+    transition: 1s ease-in;
+    opacity: 1;
+  }
+}
+@media (max-width: 870px) {
+  .menu h1,
+  a,
+  .button {
+    transition: 1s ease-out;
+    opacity: 0;
+  }
+  .btn-log {
+    transition: 1s ease-in;
+    opacity: 0;
+  }
+}
+@media (min-width: 870px) {
+  .menu,
+  h1,
+  a,
+  .btn-log {
+    transition: 1s ease-in;
+    opacity: 1;
+  }
+}
+@media (max-width: 870px) {
+  .container h1 {
+    transition: 1s ease-out;
+    opacity: 0;
+  }
+}
+@media (max-width: 800px) {
+  .container h1 {
+    transition: 1s ease-out;
     display: none;
   }
 }
 
-/* *--------------------------- ImgSlider end ------------------------ */
-
-/* !----------------------- new Section ---------------------------*/
+@media (min-width: 800px) {
+  button .hamburger {
+    transition: 1s ease-in;
+    opacity: 1;
+  }
+}

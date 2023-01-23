@@ -1,25 +1,12 @@
 @import "https://unpkg.com/open-props";
 @import "https://unpkg.com/open-props/normalize.min.css";
 html {
-  --link-visited: var(--stone-0);
+  --link: var(--blue-1);
+  --link-visited: var(--blue-1);
+  font-weight: 700;
 }
 body {
   margin: 0;
-}
-
-::-webkit-scrollbar {
-  width: 2em;
-}
-
-::-webkit-scrollbar-track {
-  background: #343e43;
-  border-radius: 100vw;
-  margin-block: 0.5em;
-  margin-inline: 0.5em;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #272d31;
-  border-radius: 100vw;
 }
 
 .media-scroller {
@@ -27,7 +14,7 @@ body {
   display: grid;
   gap: var(--_spacer);
   grid-auto-flow: column;
-  grid-auto-columns: 23%;
+  grid-auto-columns: 35%;
   scrollbar-width: thin;
 
   padding: 0 var(--_spacer) var(--_spacer) 0;
@@ -35,13 +22,27 @@ body {
   overflow-x: auto;
   overscroll-behavior-inline: contain;
 }
+.media-scroller::-webkit-scrollbar {
+  width: 2em;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--gray-8);
+
+  border-radius: 100vw;
+  margin-block: 0.5em;
+  margin-inline: 0.5em;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--gray-9);
+  border-radius: 100vw;
+}
 
 .media-element {
   display: grid;
   grid-template-rows: min-content;
   gap: var(--_spacer);
   padding: var(--_spacer);
-  background: var(--surface-2);
+  background: var(--gray-8);
   border-radius: var(--radius-2);
   box-shadow: var(--shadow-6);
 }
@@ -89,10 +90,59 @@ body {
 }
 
 .section-title {
-  padding-inline-start: var(--size-6);
+  padding-inline-start: var(--size-);
   margin-block: var(--size-9) var(--size-3);
 }
 
+/* !section artile grid  */
+/* components  */
+
+/* ------------------- cards section start ------------------------  */
+.sec-2-title h2 {
+  width: 100vw;
+  padding-left: 20px;
+  color: var(--green-3);
+  background-color: var(--gray-9);
+  border-radius: 0 0 10px 10px;
+}
+.sec-2-title {
+  background-color: var(--gray-9);
+  border-radius: 0 0 10px 10px;
+  border-bottom: var(--green-3) solid 5px;
+}
+
+#jp-css {
+  width: 100%;
+}
+
+.grid-col-span-3 {
+  grid-column: span 3;
+}
+.grid-col-span-2 {
+  grid-column: span 2;
+}
+.testimonial-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(5, 1fr);
+
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+}
+
+.testimonial {
+  font-size: var(--font-size-fluid-0);
+  padding: 2rem;
+  background-color: var(--green-5);
+  box-shadow: 2.5rem 3.75rem 3rem rgba(0, 0, 0, 0.425);
+}
+
+.testimonial:nth-child(3) {
+  background: var(--gray-3);
+}
+
+/* media quieries  */
 @media (max-width: 700px) {
   .media-scroller {
     --_spacer: var(--size-3);
@@ -100,6 +150,20 @@ body {
     gap: var(--_spacer);
     grid-auto-flow: column;
     grid-auto-columns: 52%;
+    scrollbar-width: thin;
+    padding: 0 var(--_spacer) var(--_spacer) 0;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+  }
+}
+
+@media (max-width: 450px) {
+  .media-scroller {
+    --_spacer: var(--size-3);
+    display: grid;
+    gap: var(--_spacer);
+    grid-auto-flow: column;
+    grid-auto-columns: 98%;
     scrollbar-width: thin;
 
     padding: 0 var(--_spacer) var(--_spacer) 0;

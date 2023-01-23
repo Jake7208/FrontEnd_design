@@ -1,3 +1,10 @@
+//  hammburg menu
+
+const hamburger = document.querySelector(".hamburger");
+
+hamburger.addEventListener("click", function () {
+  this.classList.toggle("is-active");
+});
 let slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
 let slideInterval = setInterval(nextSlide, 5000);

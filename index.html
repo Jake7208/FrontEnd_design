@@ -5,13 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="openprops.css" />
     <link
       rel="stylesheet"
@@ -20,17 +13,25 @@
     <script src="script.js" defer></script>
     <title>Intro to design Final</title>
   </head>
-  <body>
-    <header>
-      <img src="logo2fixed.png" alt="logo" />
-    </header>
+  <body style="--font-sans: var(--font-sans)">
     <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#Contact">Contact</a></li>
-        <li><a href="#Shop">Shop</a></li>
-        <button class="button" type="button">Login</button>
-      </ul>
+      <div class="container">
+        <h1>BikesPro</h1>
+        <div class="menu">
+          <a href="#" class="is-active">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <button class="btn-log" type="button">Login</button>
+        </div>
+        <div class="logo">
+          <img src="logo.png" alt="logo" width="100px" height="80px" />
+        </div>
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
 
     <section id="img-slider" aria-label="bike photos">
@@ -52,8 +53,8 @@
     </section>
 
     <!-- Kevin Powells guide to horizontal scrolling implementation -->
-    <section>
-      <h2 class="section title">Bike categories</h2>
+    <section id="kp-css">
+      <h2 class="section title">Bikes. Trails. Outdoors.</h2>
       <div class="media-scroller snaps--individual">
         <div class="media-element">
           <img src="img/aqua.jpg"based" />
@@ -97,6 +98,60 @@
         </div>
       </div>
     </section>
-    <section></section>
+    <section class="sec-2-title"><h2>Lets talk bikes...</h2></section>
+
+    <section id="jp-css">
+      <main class="testimonial-grid">
+        <article class="testimonial grid-col-span-3">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur,
+          nobis. Omnis, magnam. Distinctio incidunt excepturi, quo in tempora
+          velit deleniti reiciendis eum, laborum eligendi iusto! Laborum labore
+          sed voluptatibus architecto.
+        </article>
+        <article class="testimonial grid-col-span-2">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo
+          natus similique doloribus quibusdam accusantium numquam maiores,
+          inventore cupiditate suscipit esse alias voluptas totam beatae,
+          delectus quia officiis illum aspernatur voluptatum?
+        </article>
+        <article class="testimonial grid-col-span-2">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
+          reiciendis voluptatum adipisci sint labore incidunt ipsum amet quis,
+          ut quia rerum molestiae quos maiores quas possimus necessitatibus sed
+          rem magnam!
+        </article>
+        <article class="testimonial grid-col-span-3">
+          <h3>Lorem ipsum, dolor sit amet</h3>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
+          reiciendis voluptatum adipisci sint labore incidunt ipsum amet quis,
+          ut quia rerum molestiae quos maiores quas possimus necessitatibus sed
+          rem magnam!
+        </article>
+        <article class="testimonial grid-col-span-3">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
+          reiciendis voluptatum adipisci sint labore incidunt ipsum amet quis,
+          ut quia rerum molestiae quos maiores quas possimus necessitatibus sed
+          rem magnam!
+        </article>
+        <article class="testimonial grid-col-span-2">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
+          reiciendis voluptatum adipisci sint labore incidunt ipsum amet quis,
+          ut quia rerum molestiae quos maiores quas possimus necessitatibus sed
+          rem magnam!
+        </article>
+        <article class="testimonial grid-col-span-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          dolorum hic facere quam optio est, debitis, mollitia voluptatem non
+          itaque quidem facilis iste maxime voluptate molestiae dolore
+          consequuntur sequi quasi!
+        </article>
+        <article class="testimonial grid-col-span-3">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
+          consectetur sapiente vero magnam ipsa, quos, temporibus sequi omnis ab
+          deleniti similique alias maiores sit soluta modi. Quam amet dolor
+          numquam!
+        </article>
+      </main>
+    </section>
   </body>
 </html>

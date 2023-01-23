@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="openprops.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/open-props/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <script src="newsletter.js" defer></script>
+    <title>Intro to design Final</title>
+  </head>
+  <body style="--font-sans: var(--font-sans)">
+    <nav>
+      <div class="container">
+        <h1>BikesPro</h1>
+        <div class="menu">
+          <a href="index.html">Home</a>
+          <a href="#" class="is-active">Newsletter</a>
+          <a href="contact.html">Contact</a>
+          <button id="login-button" class="btn-log" type="button">Login</button>
+          <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" /><br />
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" /><br />
+
+                <input type="submit" value="Login" />
+                <label for="Newsletter"></label>
+                <p>
+                  <a style="all: unset" href="contact.html"
+                    >Don't have an Account?</a
+                  >
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="logo">
+          <img src="logo.png" alt="logo" width="100px" height="80px" />
+        </div>
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+    <nav class="mobile-nav">
+      <a class="mobileA" href="index.html">Home</a>
+      <a class="mobileA" href="#" class="is-active">Newsletter</a>
+      <a class="mobileA" href="contact.html">Contact</a>
+      <button id="login-button" class="btn-log-mobile" type="button">
+        Login
+      </button>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" /><br />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" /><br />
+
+            <input type="submit" value="Login" />
+            <label for="Newsletter"></label>
+            <p>
+              <a style="all: unset" href="contact.html"
+                >Don't have an Account?</a
+              >
+            </p>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="back-img">
+      <section id="newsletter">
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" /><br />
+
+          <input type="submit" value="Join Newsletter" />
+        </form>
+      </section>
+
+      <div class="media-element">
+        <article
+          style="background: var(--gray-4); color: var(--gray-12)"
+          class="testimonial grid-col-span-3"
+        >
+          <h3 style="color: var(--green-4)">
+            Stay up to date with all things bike related?
+          </h3>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur,
+          nobis. Omnis, magnam. Distinctio incidunt excepturi, quo in tempora
+          velit deleniti reiciendis eum, laborum eligendi iusto! Laborum labore
+          sed voluptatibus architecto.
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

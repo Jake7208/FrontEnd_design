@@ -10,6 +10,12 @@
       rel="stylesheet"
       href="https://unpkg.com/open-props/normalize.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
     <script src="script.js" defer></script>
     <title>Intro to design Final</title>
   </head>
@@ -17,11 +23,32 @@
     <nav>
       <div class="container">
         <h1>BikesPro</h1>
+        <img src="logo.png" width="80px" alt="" />
         <div class="menu">
-          <a href="#" class="is-active">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-          <button class="btn-log" type="button">Login</button>
+          <a class="desktopA" href="#" class="is-active">Home</a>
+          <a class="desktopA" href="newsletter.html">Newsletter</a>
+          <a class="desktopA" href="contact.html">Contact</a>
+          <button id="login-button" class="btn-log" type="button">Login</button>
+          <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" /><br />
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" /><br />
+
+                <input type="submit" value="Login" />
+                <label for="Newsletter"></label>
+                <p>
+                  <a style="all: unset" href="contact.html"
+                    >Don't have an Account?</a
+                  >
+                </p>
+              </form>
+            </div>
+          </div>
         </div>
         <div class="logo">
           <img src="logo.png" alt="logo" width="100px" height="80px" />
@@ -33,15 +60,42 @@
         </button>
       </div>
     </nav>
+    <nav class="mobile-nav">
+      <a class="mobileA" href="#" class="is-active">Home</a>
+      <a class="mobileA" href="newsletter.html">Newsletter</a>
+      <a class="mobileA" href="contact.html">Contact</a>
+      <button id="login-button" class="btn-log-mobile" type="button">
+        Login
+      </button>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" /><br />
 
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" /><br />
+
+            <input type="submit" value="Login" />
+            <label for="Newsletter"></label>
+            <p>
+              <a style="all: unset" href="contact.html"
+                >Don't have an Account?</a
+              >
+            </p>
+          </form>
+        </div>
+      </div>
+    </nav>
     <section id="img-slider" aria-label="bike photos">
       <div class="carousel">
         <div class="slides">
           <div class="slide active">
-            <img src="./img/image1.jpg" alt="Slide />
+            <img src="./img/image1.jpg" alt="Slide" />
           </div>
           <div class="slide">
-            <img src="./img/image3.jpg" alt="Slide 2" />
+            <img src="./img/image2.jpg" alt="Slide 2" />
           </div>
           <div class="slide">
             <img src="./img/image3.jpg" alt="Slide 3" />
@@ -57,43 +111,43 @@
       <h2 class="section title">Bikes. Trails. Outdoors.</h2>
       <div class="media-scroller snaps--individual">
         <div class="media-element">
-          <img src="img/aqua.jpg"based" />
+          <img src="img/imageE.jpg"based" />
           <p class="title">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
             fugiat!
           </p>
         </div>
         <div class="media-element">
-          <img src="./img/aqua.jpg" alt="based" />
+          <img src="./img/imageA.jpg" alt="based" />
           <p class="title">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
         <div class="media-element">
-          <img src="./img/aqua.jpg" alt="based" />
+          <img src="./img/imageB.jpg" alt="based" />
           <p class="title">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita,
             nihil.
           </p>
         </div>
         <div class="media-element">
-          <img src="./img/aqua.jpg" alt="based" />
+          <img src="./img/imageC.jpg" alt="based" />
           <p class="title">Lorem ipsum dolor sit amet.</p>
         </div>
         <div class="media-element">
-          <img src="./img/aqua.jpg" alt="based" />
+          <img src="./img/imageD.jpg" alt="based" />
           <p class="title">Lorem ipsum dolor sit amet.</p>
         </div>
         <div class="media-element">
-          <img src="./img/aqua.jpg" alt="based" />
+          <img src="./img/imageH.jpg" alt="based" />
           <p class="title">Lorem ipsum dolor sit amet.</p>
         </div>
         <div class="media-element">
-          <img src="./img/aqua.jpg" alt="based" />
+          <img src="./img/imageF.jpg" alt="based" />
           <p class="title">Lorem ipsum dolor sit amet.</p>
         </div>
         <div class="media-element">
-          <img src="./img/aqua.jpg" alt="based" />
+          <img src="./img/imageG.jpg" alt="based" />
           <p class="title">Lorem ipsum dolor sit amet.</p>
         </div>
       </div>
@@ -103,18 +157,21 @@
     <section id="jp-css">
       <main class="testimonial-grid">
         <article class="testimonial grid-col-span-3">
+          <h3>Lorem ipsum, dolor sit amet</h3>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur,
           nobis. Omnis, magnam. Distinctio incidunt excepturi, quo in tempora
           velit deleniti reiciendis eum, laborum eligendi iusto! Laborum labore
           sed voluptatibus architecto.
         </article>
         <article class="testimonial grid-col-span-2">
+          <h3>Lorem ipsum, dolor sit amet</h3>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo
           natus similique doloribus quibusdam accusantium numquam maiores,
           inventore cupiditate suscipit esse alias voluptas totam beatae,
           delectus quia officiis illum aspernatur voluptatum?
         </article>
         <article class="testimonial grid-col-span-2">
+          <h3 style="color: var(--gray-12)">Lorem ipsum, dolor sit amet</h3>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
           reiciendis voluptatum adipisci sint labore incidunt ipsum amet quis,
           ut quia rerum molestiae quos maiores quas possimus necessitatibus sed
@@ -153,5 +210,16 @@
         </article>
       </main>
     </section>
+
+    <footer>
+      <div class="container">
+        <p>Copyright © 2023 BikesPro</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
